@@ -1,0 +1,48 @@
+#include <iostream>
+#include <thread>
+#include <chrono>
+using namespace std;
+
+int main() {
+    string password;
+    const string rightpassword = "YOUR_PASSWORD";
+
+    cout << "EXODUS Login\n\n";
+    cout << "Enter Password: ";
+    cin >> password;
+
+    if (password == rightpassword) {
+        cout << "Password is correct!\n";
+        this_thread::sleep_for(chrono::milliseconds(500));
+        system("cls");
+
+        cout << "EXODUS SEED AND PASSWORD\n\n";
+        cout << "1. Seed\n";
+        cout << "2. Password\n";
+        cout << "Enter Option: ";
+
+        string option;
+        cin >> option;
+
+        if (option == "1") {
+            system("cls");
+            cout << "EXODUS SEED\n\n";
+            cout << "1. YOUR_SEED\n2. YOUR_SEED\n3. YOUR_SEED\n4. YOUR_SEED\n5. YOUR_SEED\n"
+                "6. YOUR_SEED\n7. YOUR_SEED\n8. YOUR_SEED\n9. YOUR_SEED\n10. YOUR_SEED\n"
+                "11. YOUR_SEED\n12. YOUR_SEED\n";
+        }
+        else if (option == "2") {
+            system("cls");
+            cout << "EXODUS PASSWORD\n\n";
+            cout << "YOUR_EXODUS_PASSWORD";
+        }
+    }
+    else {
+        cout << "Password is wrong!";
+    }
+
+    cout << "\n\nPress Enter to exit...";
+    cin.ignore();
+    cin.get();
+    return 0;
+}
